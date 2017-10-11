@@ -1,0 +1,20 @@
+---
+output: html_document
+runtime: shiny
+---
+
+## First Interactive Documents
+
+Inside the following chunk:
+
+1. Add an `inputPanel()` function to produce a radio button console. It should have two options: *Hollow* or *Filled* circles, taking the values 16 and 1 respectively.
+2. Next, wrap the plotting functions in a `renderPlot({})` function.
+3. Call the internal `input` object, which will be produced by the inputPanel() function, to set the appropriate argument in the plot.
+
+```{r}
+library(ggplot2)
+
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point(col = "red", alpha = 0.5, size = 3, shape = 19)
+```
+
